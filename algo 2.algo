@@ -1,0 +1,25 @@
+ALGORITHM checkpoint_algo
+VAR
+     i :INTEGER :=0;
+     j:INTEGER:=0;
+     somme :INTEGER :=0;
+     tab1,tab2 : ARRAY_OF INTEGER[20];
+     tab1 :[22 ,8 ,65 ,27, 5];
+     tab2 :[55, 65, 12, 8, 77];
+     
+BEGIN
+
+ FOR i FROM 0 TO max STEP step  DO
+     
+  {
+   FOR j FROM 0 TO max STEP step  DO
+   {
+   if(tab1[i] <> tab2[j])
+    {somme=somme +tab1[i];
+    } 
+   }
+   END FOR
+   } 
+END FOR
+   whrite("la somme des entiers differents est :" somme);
+   END

@@ -1,0 +1,28 @@
+ALGORITHM checkpoint_algo
+VAR
+     i :INTEGER :=0;
+     ph :STRING  :='bonjour tout le monde.';
+     nombre_de_mot:integer :=1;
+     nombre_de_voyelle:integer :=0;
+BEGIN
+
+ FOR i FROM 0 TO max STEP step  DO
+     
+  {
+   if(ph[i]=' ')
+      {
+       nombre_de_mot++;
+      }
+   write('le nombre de mot est :'nombre_de_mot + 1);
+
+
+   if(ph[i]:='a' ||ph[i]: 'i'  || ph[i]::='o' || ph[i]:='e' || ph[i]:='u')
+      {
+          nombre_de_voyelle++;   
+      }
+ write('le nombre de voyelle est :'nombre_de_voyelle);
+  }
+
+END
+
+END

@@ -1,0 +1,33 @@
+ALGORITHM avec 2 tab de hachages
+VAR
+
+   tab1,tab2 : HASH_TABLE<INTEGER,STRING>;
+    i,j: INTEGER ;
+    somme: STRING ;
+BEGIN
+   
+
+   tab1.insert(0,"33");
+   tab1.insert(1,"45");
+   tab1.insert(2,"12");
+   tab1.insert(3,"90");
+   Write(tab1);
+
+   tab2.insert(0,"45");
+   tab2.insert(1,"8");
+   tab2.insert(2,"90");
+   tab2.insert(3,"77");
+   Write(tab2);
+
+   FOR i FROM 0 TO tab1.length -1 STEP 1  DO
+       
+         FOR j FROM 0 TO tab2.length -1 STEP 1  DO
+    
+            IF (tab1.get(str[i]) <> tab2.get(str[j])) THEN
+           somme:= somme + tab1.get(str[i]);
+           BREAK;
+            END_IF
+   END FOR
+     END FOR
+      whrite("la somme des entiers differents est :" somme);
+   END

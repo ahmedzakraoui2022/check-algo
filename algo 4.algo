@@ -1,0 +1,19 @@
+ALGORITHM TRI_tableau
+{
+VAR
+  tab :ARRAY_OF INTEGER [30];
+  card,i,j:INTEGER;
+BEGIN
+
+ FOR(i=1,i<tab.length-1,i++)
+  card = tab[i];
+    FOR(j=i-1,j<tab.length,j++)
+      
+      IF(tab[j]>card)
+        tab[i-1] =card;
+      END_IF
+
+    END_FOR
+ END_FOR       
+END
+}

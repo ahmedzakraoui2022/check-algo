@@ -1,0 +1,73 @@
+
+PROCEDURE dot_product (v1,v2,VAR ps)
+VAR
+    
+    v1 :ARRAY_OF FLOAT:=[2,5,6,9,7,2];
+    v2 :ARRAY_OF FLOAT :=[4,7,5,1,6,4];
+    som ,ps :FLOAT = 0;
+
+BEGIN
+    if(v1.length <> v2.length)
+      whrite("les deux vectreurs ne sont pas EGAUX ");
+    
+    ELSE
+    { 
+      for(var i;i<v1.length;i++)
+         {
+             ps = v1[i] * v2[i];
+             som= som + ps;
+         }
+         END_FOR
+    }
+    END_IF
+    whrite("le produit scalaire est: " som);
+END
+
+
+FUNCTION dot_product (v1,v2): FLOAT
+VAR
+    
+    v1 :ARRAY_OF FLOAT [2,5,6,9,7,2];
+    v2 :ARRAY_OF FLOAT [4,7,5,1,6,4];
+    som ,ps :FLOAT = 0;
+     i :INTEGER;
+BEGIN
+    if(v1.length <> v2.length)
+      whrite("les deux vectreurs ne sont pas EGAUX ");
+    
+    ELSE
+    { 
+      for(var i;i<v1.length;i++)
+         {
+             ps = v1[i] * v2[i];
+             som= som + ps;
+         }
+         END_FOR
+    }
+    END_IF
+    whrite("le produit scalaire est: ");
+    return (som)
+END 
+
+ALGORITHM vectreurs
+{
+ VAR
+ 
+ V1,v2,n1,n2 : ARRAY_OF FLOAT[50];
+ ps :FLOAT ;
+
+ BEGIN
+
+  read_array(n1,v1);
+  read_array(n2,v2);
+
+  dot_product(v1,v2,ps)
+IF (ps = 0) THEN
+   whrite("les 2 vecteurs sont orthogonaux");
+ELSE
+  whrite("les 2 vecteurs ne sont pas orthogonaux");
+END_IF
+
+
+END
+}
